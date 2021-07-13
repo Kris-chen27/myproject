@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购-注册页面</title>
+    <!-- 网站说明 -->
+    <meta name=" description" content="品优购专业的综合网上购物商城，销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、
+    食品数万个品牌优质商品.便捷、诚信的服务,为您提供愉悦的网上购物体验!" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="网上购物,网上商城手机,笔记本，电脑,MP3,CD,VCD,DV,相机,数码，配件,手表,存储卡，京东" />
+    <!-- htpp:/www.bitbug.net -->
+    <!-- 网站引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/public/css/logon.css">
+    <link rel="stylesheet" href="/public/css/base.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" title="品优购商城" target="_blank"><img src="/public/images/logo_03.png" alt=""></a>
+            <a href="index.html" class="bt">
+                <h4>品优购商城</h4>
+                <p>让每个人享受科技的乐趣</p>
+            </a>
+        </div>
+    </header>
+    <!-- register注册主体部分 -->
+    <div class="register w">
+        <div class="re_hd">
+            <h4>注册新用户</h4>
+            <ul>
+                <li>我有账号，去<a href="sign.html" target="_blank">登录</a></li>
+            </ul>
+        </div>
+        <div class="reg_form">
+            <ul>
+                <li><label for="">手机号：</label><input type="text" placeholder="手机号" class="number">
+                    <p class="message">请输入您的手机号码</p>
+                    <!-- <i class="error_icom">❌</i><span
+                        class="error">手机号码不正确，请重新输入</span> -->
+                </li>
+                <li><label for="">短信验证：</label><input type="number">
+                    <button class="btn">发送</button>
+                </li>
+                <li><label for="">登录密码：</label><input type="password" class="pwd1">
+                    <!-- <i class="ture_icom">✔</i><span class="ture">恭喜密码输入正确</span> -->
+                    <!-- <span class="true">请输入6~16密码(包含数字、字符、特殊字符)</span> -->
+                    <p class="message2">请输入6~16密码(包含数字、字符、特殊字符)</p>
+                </li>
+                <li class="grade"><label for="">安全强度</label><i class="grade_1">弱</i><i class="grade_2">中</i><i
+                        class="grade_3">强</i>
+                </li>
+                <li><label for="">确认密码：</label><input type="password" class="pwd2">
+                    <!-- <i class="ture_icom">✔</i><span class="ture">恭喜密码输入正确</span> -->
+                    <p class="message3">请再次输入您的密码</p>
+                </li>
+                <li><input type="checkbox" checked="checked" id="box_ch"><span>同意协议并进入</span>
+                    <span class="yonghu">《品优购用户协议》</span>
+                </li>
+                <li>
+                    <!-- <button>完成注册</button> -->
+                    <div class="sumbit">完成注册</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- footer底部 -->
+    <div class="footer">
+        <div class="ft_dd">
+            <div class="dd1">
+                <ul class="dd1">
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>联系客服</li>
+                    <li>商家入驻</li>
+                    <li>营销中心</li>
+                    <li>手机品优购</li>
+                    <li>友情链接</li>
+                    <li>销售联盟</li>
+                    <li>品优购社区</li>
+                    <li>品优购公益</li>
+                    <li>English Site</li>
+                    <li class="dlast">Contact U</li>
+                </ul>
+                <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn</p>
+                <span>京ICP备08001421号京公网安备110108007702</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var inputs = document.querySelector('.reg_form').querySelectorAll('input');
+        // var message = document.querySelector('.rreg_form').querySelectorAll('.message');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', function () {
+                // this.style.borderColor = '#ff5c00';
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].style.borderColor = '';
+                }
+                this.style.borderColor = 'pink';
+            })
+        }
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('blur', function () {
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].style.borderColor = '';
+                }
+            })
+        }
+        //
+        var number = document.querySelector('.reg_form').querySelector('.number');
+        var message = document.querySelector('.reg_form').querySelector('.message');
+        number.addEventListener('blur', function () {
+            if (number.value === '') {
+                message.className = 'wrong';
+                message.innerHTML = '请先输入电话号码再继续下一步';
+            }
+        })
+        number.addEventListener('focus', function () {
+            message.className = 'message';
+            message.innerHTML = '请输入您的手机号码';
+        })
+        //
+        var btn = document.querySelector('.reg_form').querySelector('.btn');
+        var time = 60;
+        var num = null;
+        btn.addEventListener('click', function () {
+            btn.disabled = true;
+            name = setInterval(function () {
+                if (time == 0) {
+                    clearInterval(name);
+                    btn.disabled = false;
+                    btn.innerHTML = '发送';
+                    time = 60;
+                } else {
+                    btn.innerHTML = '' + time + 's后重新发送';
+                    time--;
+                }
+            }, 1000)
+        })
+        //
+        var pwd1 = document.querySelector('.reg_form').querySelector('.pwd1');
+        var message2 = document.querySelector('.reg_form').querySelector('.message2');
+        pwd1.addEventListener('blur', function () {
+            if (pwd1.value.length < 6 || pwd1.value.length > 16) {
+                message2.className = 'wrong';
+                message2.innerHTML = '您输入的格式不正确';
+            } else {
+                message2.className = 'right';
+                message2.innerHTML = '您输入的格式正确啦';
+            }
+        })
+        //
+        var pwd2 = document.querySelector('.reg_form').querySelector('.pwd2');
+        var message3 = document.querySelector('.reg_form').querySelector('.message3');
+        pwd2.addEventListener('blur', function () {
+            if (pwd2.value.length < 6 || pwd2.value.length > 16) {
+                message3.className = 'wrong';
+                message3.innerHTML = '请输入确认您的密码';
+            } else {
+                message3.className = 'right';
+                message3.innerHTML = '您输入的格式一致';
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+/* header s */
+.header{
+    /* position: relative; */
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #d21623;
+}
+.logo{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: skyblue; */
+}
+.logo a{
+    position: absolute;
+    top: 18px;
+    left: 10px;
+}
+.logo .bt{
+    position: absolute;
+    top: 18px;
+    left: 200px;
+}
+.logo .bt h4{
+    font-size: 25px;
+    color: black;
+    font-weight: normal;
+}
+.logo .bt p{
+    color: rgba(0, 0,0, .7);
+}
+/* register注册主体部分 */
+.w{
+    margin-top: 10px;
+    height: 522px;
+    border: 1px solid #ccc;
+}
+.re_hd{
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+}
+.re_hd h4{
+    float: left;
+    padding-left: 5px;
+    font-weight: normal;
+    font-size: 18px;
+}
+.re_hd ul li{
+    float: right;
+    margin-right: 20px;
+}
+.re_hd ul li a{
+    color: #d21623;
+}
+.reg_form{
+    width: 700px;
+    /* background-color: pink; */
+    margin: 50px auto;
+}
+.reg_form ul li{
+    margin-bottom: 10px;
+}
+.reg_form ul li label{
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.reg_form ul li input{
+    width: 242px;
+    height: 35px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+.reg_form ul li .message,
+.message2,
+.message3{
+    display: inline-block;
+    padding: 0 20px;
+    background: url(../images/1_01.png) no-repeat left center;
+    font-size: 12px;
+    /* color: #999999; */
+}
+/* wrong */
+.wrong{
+    display: inline-block;
+    padding: 0 20px;
+    background: url(../images/2_03.png) no-repeat left center;
+    font-size: 12px;
+    color: red;
+}
+/* right */
+.right{
+    display: inline-block;
+    padding: 0 20px;
+    background: url(../images/3_03.png) no-repeat left center;
+    font-size: 12px;
+    color: seagreen;
+}
+/* btn */
+.reg_form ul li .btn{
+    margin-left: 5px;
+    font-size: 14px;
+}
+.error{
+    color: red;
+}
+.error_icom{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+/* .true{
+    display: inline-block;
+    padding: 0 20px;
+    background: url(../images/1_01.png) no-repeat left center;
+}
+.ture{
+    color: green;
+}
+.ture_icom{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #fff;
+} */
+.grade{
+    padding-left: 120px;
+}
+.grade_1,
+.grade_2,
+.grade_3{
+    display: inline-block;
+    margin-left: 5px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+.grade_1{
+    background-color: red;
+}
+.grade_2{
+    background-color: green;
+}
+.grade_3{
+    background-color: yellowgreen;
+}
+.ch_box input{
+    width: 15px;
+    height: 15px;
+}
+.reg_form ul li #box_ch{
+    margin: 20px 5px 0 100px;
+    width: 15px;
+    height: 15px;
+}
+.reg_form ul li .yonghu{
+    color: blue;
+}
+.reg_form ul li .sumbit{
+    margin: 20px 0 0 130px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #d21623;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* footer s */
+.footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 120px;
+    background-color: #f5f5f5;
+}
+.ft_dd{
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 100px;
+    /* background-color: pink; */
+}
+.ft_dd .dd1{
+    float: left;
+    margin: 15px 0 0 100px;
+}
+.ft_dd .dd1 ul li{
+    float: left;
+    padding: 0 8px;
+    border-right: 1px solid black;
+}
+.ft_dd .dd1 .dlast{
+    border-right: none;
+}
+.ft_dd .dd1 p{
+    position: absolute;
+    top: 50px;
+    left: 260px;
+    margin-top: 10px;
+}
+.ft_dd span{
+    position: absolute;
+    top: 80px;
+    left: 480px;
+}

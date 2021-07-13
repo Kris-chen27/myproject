@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购-登录页面</title>
+    <meta name=" description" content="品优购专业的综合网上购物商城，销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、
+    食品数万个品牌优质商品.便捷、诚信的服务,为您提供愉悦的网上购物体验!" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="网上购物,网上商城手机,笔记本，电脑,MP3,CD,VCD,DV,相机,数码，配件,手表,存储卡，京东" />
+    <!-- htpp:/www.bitbug.net -->
+    <!-- 网站引入favicon图标 -->
+    <link rel="shortcut icon" href="/views/favicon.ico" />
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/logon.css">
+    <link rel="stylesheet" href="/public/css/sign.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" title="品优购商城" target="_blank"><img src="/public/images/logo_03.png" alt=""></a>
+            <a href="index.html" class="bt" target="_blank">
+                <h4>品优购商城</h4>
+                <p>让每个人享受科技的乐趣</p>
+                <!-- <span>让每个人享受科技的乐趣</span> -->
+            </a>
+        </div>
+    </header>
+    <!-- sign -->
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">username</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </div>
+    </form>
+    <!-- <div class="box">
+        <img src="/public/images/登录背景图.jpg" alt="">
+        <div class="box_bd">
+            <div class="bd_hd">
+                <a href="#" class="a1">
+                    <h3>账号登录</h3>
+                </a>
+                <a href="#" class="a2">
+                    <h4>二维码登录</h4>
+                </a>
+            </div>
+            <div class="bd_bd">
+                <ul>
+                    <li>
+                        <label for="">账号：</label><input type="text" placeholder="邮箱/手机号码/品优购ID" class="input">
+                    </li>
+                    <li>
+                        <label for="">密码：</label><input type="password" class="pwd">
+                        <span class="openPwd">显示密码</span>
+                    </li>
+                    <li><button>登录</button></li>
+                    <li class="a3">
+                        <a href="#">手机短信验证登录</a>
+                    </li>
+                    <li class="a4">
+                        <a href="logon.html" target="_blank">立即注册&nbsp;|&nbsp;忘记密码？</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- footer底部 -->
+    <div class="footer">
+        <div class="ft_dd">
+            <div class="dd1">
+                <ul class="dd1">
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>联系客服</li>
+                    <li>商家入驻</li>
+                    <li>营销中心</li>
+                    <li>手机品优购</li>
+                    <li>友情链接</li>
+                    <li>销售联盟</li>
+                    <li>品优购社区</li>
+                    <li>品优购公益</li>
+                    <li>English Site</li>
+                    <li class="dlast">Contact U</li>
+                </ul>
+                <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn</p>
+                <span>京ICP备08001421号京公网安备110108007702</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var inputs = document.querySelector('.bd_bd').querySelectorAll('input');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', function () {
+                // this.style.borderColor = '#ff5c00';
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].style.borderColor = '';
+                }
+                // this.style.borderColor = '#ff5c00';
+                this.style.borderColor = 'pink';
+            })
+        }
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('blur', function () {
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].style.borderColor = '';
+                }
+            })
+        }
+        // 
+        var pwd = document.querySelector('.bd_bd').querySelector('.pwd');
+        var openPwd = document.querySelector('.bd_bd').querySelector('.openPwd');
+        var flag = 0;
+        openPwd.addEventListener('click', function () {
+            if (flag == 0) {
+                pwd.type = 'text';
+                openPwd.innerHTML = '隐藏密码';
+                flag = 1;
+            } else {
+                pwd.type = 'password';
+                openPwd.innerHTML = '显示密码';
+                flag = 0;
+            }
+        })
+    </script>
+</body>
+
+</html>

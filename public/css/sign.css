@@ -1,0 +1,140 @@
+.header{
+    margin-bottom: 100px;
+}
+.header .logo p{
+    margin-bottom: 10px;
+}
+.box{
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: 588px;
+    background-color: pink;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.box_bd{
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    width: 420px;
+    height: 468px;
+    background-color: #fff;
+}
+.box_bd .bd_hd{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    /* background-color: pink; */
+}
+.box_bd .bd_hd h3{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 150px;
+    font-weight: normal;
+    font-size: 20px;
+    border-right: 1px solid #ccc;
+}
+.box_bd .bd_hd h4{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.bd_bd{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 388px;
+    background-color: #fff;
+}
+.bd_bd ul li{
+    margin-top: 20px;
+}
+.bd_bd ul li label{
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+    font-size: 18px;
+}
+.bd_bd ul li input{
+    width: 252px;
+    height: 47px;
+    border: 1px solid #ccc;
+}
+.bd_bd ul li .input{
+    color: #333;
+}
+.bd_bd ul li .pwd{
+    color: #333;
+}
+/* 显隐密码s */
+.bd_bd ul li .openPwd{
+    cursor: pointer;
+}
+/* .bd_bd ul li img{
+    float: right;
+    margin-right: 30px;
+    margin-top: 15px;
+    width: 40px;
+} */
+.bd_bd ul li button{
+    margin: 15px 0 0 70px;
+    width: 300px;
+    height: 55px;
+    background-color: #d21623;
+    border: none;
+    color: #fff;
+}
+.bd_bd .a3{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.bd_bd .a4{
+    text-align: center;
+    font-size: 16px;
+}
+
+/* footer s */
+.footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 120px;
+    background-color: #f5f5f5;
+}
+.ft_dd{
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 100px;
+    /* background-color: pink; */
+}
+.ft_dd .dd1{
+    float: left;
+    margin: 15px 0 0 100px;
+}
+.ft_dd .dd1 ul li{
+    float: left;
+    padding: 0 8px;
+    border-right: 1px solid black;
+}
+.ft_dd .dd1 .dlast{
+    border-right: none;
+}
+.ft_dd .dd1 p{
+    position: absolute;
+    top: 50px;
+    left: 260px;
+    margin-top: 10px;
+}
+.ft_dd span{
+    position: absolute;
+    top: 80px;
+    left: 480px;
+}
